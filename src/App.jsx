@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import { useState, useEffect } from 'react';
 import TodoForm from './components/TodoForm.jsx';
 import TodoList from './components/TodoList.jsx';
 import { Typography } from '@mui/material';
@@ -33,10 +32,10 @@ function App() {
 
   return (
     <>
-      <div className='App'>
-          <Typography style={{padding:12}} variant='h1' >React Todo</Typography>
+      <div className='App' style={{display: "flex", flexDirection: "column"}}>
+          <Typography style={{ fontFamily: "Aboreto", fontWeight: "400", padding:12, marginBottom: "1.2rem"}} variant='h2' align='center' >To-do List</Typography>
           <TodoForm addTodo={addTodo} />
-          <TodoList 
+          <TodoList
             todos={todos} 
             toggleCompleted={toggleCompleted} 
             removeTodo={removeTodo}

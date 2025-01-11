@@ -1,6 +1,6 @@
-import React from "react";
 import Todo from "./Todo.jsx";
 import { List } from "@mui/material";
+
 
 const TodoList = ({todos, toggleCompleted, removeTodo}) => {
     return (
