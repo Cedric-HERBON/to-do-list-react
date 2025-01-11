@@ -1,6 +1,5 @@
 import { CheckBox, Close } from "@mui/icons-material";
 import { IconButton, ListItem, Typography } from "@mui/material";
-import React from "react";
 
 const Todo = ({todo, toggleCompleted, removeTodo}) => {
 
@@ -12,12 +11,12 @@ const Todo = ({todo, toggleCompleted, removeTodo}) => {
     };
 
     return (
-        <ListItem style={{display: "flex"}}>
+        <ListItem style={{display: "flex", justifyContent: "center", gap: "1rem"}}>
             <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
             <Typography
                 variant="body1"
-                style={{
-                textDecoration: todo.completed ? "line-through" : null
+                style={{ fontFamily: "Cabinet Grotesk",
+                textDecoration: todo.completed ? "line-through" : null, fontSize: "1.1rem", color: todo.completed ? "#8c8c8c" : "black"
                 }}
             >
                 {todo.task}</Typography>
